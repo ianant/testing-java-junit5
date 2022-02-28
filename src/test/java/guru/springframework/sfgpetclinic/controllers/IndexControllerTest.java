@@ -1,6 +1,8 @@
 package guru.springframework.sfgpetclinic.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,8 +23,15 @@ class IndexControllerTest {
     }
 
     @Test
+    @Disabled
     void oupsHandler() {
         assertTrue("notimplemented".equals(indexController.oupsHandler()),()->"this is some fancy message through" +
                 "lambda");
+    }
+
+    @Test
+    @DisplayName("Exception throws")
+    void oupsHandlerException() {
+        assertThrows(ValueNotFoundException.class,()->indexController.oupsHandler());
     }
 }
