@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.controllers;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -21,6 +22,8 @@ class IndexControllerTest {
     void index() {
         assertEquals("index",indexController.index(),"Expected output is not correct");
         assertEquals("index",indexController.index(),()->"this is some fancy message through lambda expression");
+       // Assertions.assertThat(indexController.index().equals("index"));
+        Assertions.assertThat(indexController.index().equalsIgnoreCase("index1"));
     }
 
     @Test
