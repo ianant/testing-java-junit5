@@ -1,0 +1,10 @@
+Write JUNIT Test for VetController listVets() method....
+
+Things to do!
+
+Create New Test for VetController.
+Test listVets() method
+Verify return value of view name.
+Use VetMapService :- add 2 or more vets.
+Create Model Implementation
+Verify that list values are added to model.
