@@ -9,9 +9,7 @@ import guru.springframework.sfgpetclinic.services.map.ModelMapImpl;
 import guru.springframework.sfgpetclinic.services.map.SpecialityMapService;
 import guru.springframework.sfgpetclinic.services.map.VetMapService;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.Set;
 
@@ -41,5 +39,12 @@ class VetControllerTest implements ControllerTest {
         assertEquals("vets/index",vetController.listVets(model));
         Set modelAttr= (Set) ((ModelMapImpl) model).getMap().get("vets");
         Assertions.assertThat(modelAttr.size()).isEqualTo(2);
+    }
+
+    @Test
+    @RepeatedTest(value = 10,name = "{displayName} : {currentRepetition} - {totalRepetitions}")
+    @DisplayName("My Repeated Tests")
+    void myRepeatedTests(){
+
     }
 }
