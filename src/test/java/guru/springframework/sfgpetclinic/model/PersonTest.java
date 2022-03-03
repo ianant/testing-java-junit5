@@ -1,6 +1,8 @@
 package guru.springframework.sfgpetclinic.model;
 
 import guru.springframework.sfgpetclinic.service.ModelTest;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -29,4 +31,5 @@ class PersonTest implements ModelTest {
                 ()->assertEquals("Anant",person.getFirstName(),"First Name failed"),
                 ()->assertEquals("Tripathi",person.getLastName(),"last name failed"));
     }
+
 }

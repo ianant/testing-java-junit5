@@ -41,7 +41,6 @@ class VetControllerTest implements ControllerTest {
         Assertions.assertThat(modelAttr.size()).isEqualTo(2);
     }
 
-    @Test
     @RepeatedTest(value = 10,name = "{displayName} : {currentRepetition} - {totalRepetitions}")
     @DisplayName("My Repeated Tests")
     void myRepeatedTests(){
