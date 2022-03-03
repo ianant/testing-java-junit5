@@ -2,6 +2,7 @@ package guru.springframework.sfgpetclinic.controllers;
 
 import guru.springframework.sfgpetclinic.fauxspring.Model;
 import guru.springframework.sfgpetclinic.model.Vet;
+import guru.springframework.sfgpetclinic.service.ControllerTest;
 import guru.springframework.sfgpetclinic.services.SpecialtyService;
 import guru.springframework.sfgpetclinic.services.VetService;
 import guru.springframework.sfgpetclinic.services.map.ModelMapImpl;
@@ -16,8 +17,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Tag("Controller")
-class VetControllerTest {
+class VetControllerTest implements ControllerTest {
 
     VetController vetController;
     VetService service;

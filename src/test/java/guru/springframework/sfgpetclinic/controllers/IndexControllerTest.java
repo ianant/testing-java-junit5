@@ -1,13 +1,13 @@
 package guru.springframework.sfgpetclinic.controllers;
 
+import guru.springframework.sfgpetclinic.service.ControllerTest;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Tag("Controller")
-class IndexControllerTest {
+class IndexControllerTest implements ControllerTest {
 
     public IndexController indexController;
 
