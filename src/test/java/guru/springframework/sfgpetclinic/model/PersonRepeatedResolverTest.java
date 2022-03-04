@@ -9,6 +9,9 @@ import org.junit.jupiter.api.TestInfo;
 public interface PersonRepeatedResolverTest {
     @BeforeEach
     default void beforeEachMethod(TestInfo testInfo, RepetitionInfo rInfo){
-        System.out.println("In default method: "+testInfo.getDisplayName()+"- "+rInfo.getCurrentRepetition()+" | "+rInfo.getTotalRepetitions());
+        System.out.println("In default method: "+
+                    testInfo.getDisplayName()+
+                "- " + rInfo.getCurrentRepetition()+
+                " | " + rInfo.getTotalRepetitions());
     }
 }
